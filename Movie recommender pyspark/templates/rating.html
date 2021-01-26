@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+    <head>
+        <html lang="en" dir="ltr">
+        <meta charset="utf-8">
+        <title>Rating</title> 
+        <style type="text/css">    
+          body
+          {
+            border: 2px solid black;
+            padding: 25px;
+            background: url("http://www.baltana.com/files/wallpapers-5/White-Background-High-Definition-Wallpaper-16573.jpg");
+            background-repeat: repeat;
+            background-size: 2000px 2000px;        } 
+        </style>
+    </head>
+
+    <body>
+        {% extends "template.html" %}
+        {% block content %}
+        <h1>Please rate each genre based on your preference </h1>
+        <form action="{{ url_for('recommendation') }}" method="POST">
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Action </font>genre?</strong><br/>Example: Die Hard</p>
+
+                 <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Action" id="Action">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Adventure </font>genre?</strong><br/>Example: Mission: Impossible</p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Adventure" id="Adventure">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Animation </font>genre?</strong><br/>Example: Li </p>
+           <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Animation" id="Animation">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+            
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Children </font>genre?</strong><br/>Example: Free Willy</p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Children" id="Children">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+             <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Comedy </font>genre?</strong><br/>Example: Dumb and Dumber </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Comedy" id="Comedy">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Crime </font>genre?</strong><br/>Example: Goodfellas </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Crime" id="Crime">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Documentary </font>genre?</strong><br/>Example: Fast, Cheap & Out of Control </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Documentary" id="Documentary">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Drama </font>genre?</strong><br/>Example: The Godfather </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Drama" id="Drama">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Fantasy </font>genre?</strong><br/>Example: Harry Potter and the Chamber of Secrets </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Fantasy" id="Fantasy">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            
+            <div>
+             <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Horror </font>genre?</strong><br/>Example: The Shining </p>
+           <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Horror" id="Horror">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+            <p><strong><font size="4" color="black"> What is your rating to <font color="Maroon">Musical </font>genre?</strong><br/>Example: Peter Pan </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Musical" id="Musical">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+             <p><strong><font size="4" color="black"> What is your rating to <font color="Maroon">Mystery </font>genre?</strong><br/>Example: Memento </p>
+           <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Mystery" id="Mystery">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Romance </font>genre?</strong><br/>Example: The Notebook </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Romance" id="Romance">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">SciFi </font>genre?</strong><br/>Example: Star Wars </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="SciFi" id="SciFi">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+            
+
+            <div>
+            <p> <strong><font size="4" color="black">What is your rating to <font color="Maroon">Thriller </font>genre?</strong><br/>Example: Spotlight </p>
+
+                <label for="rate-select">Rate this movie from 1 to 10</label>
+
+                <select name="Thriller" id="Thriller">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+
+                </select>
+            </div>
+
+        
+            <div>
+            <h3><font color="midnightblue">If you're sure about these ratings, go ahead and click this button!</h3>
+            </div>
+            <button type="submit" class="btn btn-success"><font color="navy"><strong>Get Recommendations!</strong></button>
+
+        </form>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,4 @@
+pyspark
+numpy==1.17.3
+Flask==1.1.1
+pandas==0.25.2

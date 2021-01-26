@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <html lang="en" dir="ltr">
+        <meta charset="utf-8">
+        <title>Recommendations</title>
+        <style type="text/css">    
+          body
+          {
+            border: 2px solid black;
+            padding: 0px;
+            background: url("https://images.unsplash.com/photo-1606579328130-6b6632fb1514?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+            background-repeat: repeat;
+            background-size: 100%; 
+            background-position: center center;
+            } 
+        </style>  
+    </head>
+
+    <body bgcolor="Lavender">
+
+            <h1><font color="black"><strong>Here are the top-20 movies that you'll most probably like:</strong></font></h1>
+       {% if answers %}
+            <div>
+              {% for answer in answers %}
+              <div class="col">
+
+                <p><a href={{answer[1]}} target='_blank'>{{answer[0]}}</a><a href={{answer[2]}} target='_blank'>   trailer on YouTube</a></p>
+              </div>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>       
+    </body>
+</html>
+
+
